@@ -16,6 +16,7 @@
 		DC9C7EE124C428E7007142E1 /* Shoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9C7EE024C428E7007142E1 /* Shoe.swift */; };
 		DC9C7EE324C42998007142E1 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9C7EE224C42998007142E1 /* Cart.swift */; };
 		DC9C7EE624C42CA3007142E1 /* ShoeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9C7EE524C42CA3007142E1 /* ShoeService.swift */; };
+		DC9C7EE824C548D3007142E1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9C7EE724C548D3007142E1 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DC9C7EE024C428E7007142E1 /* Shoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoe.swift; sourceTree = "<group>"; };
 		DC9C7EE224C42998007142E1 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		DC9C7EE524C42CA3007142E1 /* ShoeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeService.swift; sourceTree = "<group>"; };
+		DC9C7EE724C548D3007142E1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				DC9C7EE024C428E7007142E1 /* Shoe.swift */,
 				DC9C7EE224C42998007142E1 /* Cart.swift */,
+				DC9C7EE724C548D3007142E1 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				DC9C7EE324C42998007142E1 /* Cart.swift in Sources */,
 				DC9C7ECA24C3F4BD007142E1 /* AppDelegate.swift in Sources */,
 				DC9C7ECC24C3F4BD007142E1 /* SceneDelegate.swift in Sources */,
+				DC9C7EE824C548D3007142E1 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
