@@ -10,4 +10,12 @@ import UIKit
 
 class NewestArrivalsCell: UICollectionViewCell {
     
+    @IBOutlet weak var shoeImageName: UIImageView!
+    @IBOutlet weak var showModelName: UILabel!
+    
+    //update the new arrivals table view
+    func updateView(shoe: Shoe) {
+        shoeImageName.image = UIImage(named: shoe.imageName)
+        showModelName.text = shoe.modelName
+    }
 }
