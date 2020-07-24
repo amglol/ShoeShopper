@@ -13,6 +13,11 @@
 		DC1778C024C646CE00D22239 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1778BF24C646CE00D22239 /* CategoryCell.swift */; };
 		DC1778C224C64D9200D22239 /* ModelNameUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1778C124C64D9200D22239 /* ModelNameUILabel.swift */; };
 		DC1778C424C6916800D22239 /* DetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1778C324C6916800D22239 /* DetailedVC.swift */; };
+		DC6A429C24C75D5600267A18 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6A429B24C75D5600267A18 /* CartTableViewCell.swift */; };
+		DC6A429E24C7600D00267A18 /* CartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6A429D24C7600D00267A18 /* CartService.swift */; };
+		DC6A42A224CA1A9200267A18 /* PurchasedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6A42A124CA1A9200267A18 /* PurchasedVC.swift */; };
+		DC6A42A624CA710300267A18 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6A42A524CA710300267A18 /* ProductCollectionViewCell.swift */; };
+		DC6A42A824CA76F300267A18 /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6A42A724CA76F300267A18 /* ProductsVC.swift */; };
 		DC9C7ECA24C3F4BD007142E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9C7EC924C3F4BD007142E1 /* AppDelegate.swift */; };
 		DC9C7ECC24C3F4BD007142E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9C7ECB24C3F4BD007142E1 /* SceneDelegate.swift */; };
 		DC9C7ED124C3F4BD007142E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC9C7ECF24C3F4BD007142E1 /* Main.storyboard */; };
@@ -32,6 +37,11 @@
 		DC1778BF24C646CE00D22239 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		DC1778C124C64D9200D22239 /* ModelNameUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelNameUILabel.swift; sourceTree = "<group>"; };
 		DC1778C324C6916800D22239 /* DetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedVC.swift; sourceTree = "<group>"; };
+		DC6A429B24C75D5600267A18 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		DC6A429D24C7600D00267A18 /* CartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartService.swift; sourceTree = "<group>"; };
+		DC6A42A124CA1A9200267A18 /* PurchasedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedVC.swift; sourceTree = "<group>"; };
+		DC6A42A524CA710300267A18 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		DC6A42A724CA76F300267A18 /* ProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsVC.swift; sourceTree = "<group>"; };
 		DC9C7EC624C3F4BD007142E1 /* ShoeShopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoeShopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9C7EC924C3F4BD007142E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC9C7ECB24C3F4BD007142E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +106,8 @@
 				DC1778BB24C624EF00D22239 /* HomeVC.swift */,
 				DC1778C324C6916800D22239 /* DetailedVC.swift */,
 				DCD7A48B24C69DAF001B49D8 /* CartVC.swift */,
+				DC6A42A124CA1A9200267A18 /* PurchasedVC.swift */,
+				DC6A42A724CA76F300267A18 /* ProductsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -107,6 +119,8 @@
 				DC1778BD24C62A3B00D22239 /* DetailsButton.swift */,
 				DC1778BF24C646CE00D22239 /* CategoryCell.swift */,
 				DC1778C124C64D9200D22239 /* ModelNameUILabel.swift */,
+				DC6A429B24C75D5600267A18 /* CartTableViewCell.swift */,
+				DC6A42A524CA710300267A18 /* ProductCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				DC9C7EE524C42CA3007142E1 /* ShoeService.swift */,
+				DC6A429D24C7600D00267A18 /* CartService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -203,15 +218,20 @@
 				DC1778BE24C62A3B00D22239 /* DetailsButton.swift in Sources */,
 				DC9C7EE624C42CA3007142E1 /* ShoeService.swift in Sources */,
 				DC1778C224C64D9200D22239 /* ModelNameUILabel.swift in Sources */,
+				DC6A429E24C7600D00267A18 /* CartService.swift in Sources */,
+				DC6A42A224CA1A9200267A18 /* PurchasedVC.swift in Sources */,
 				DC9C7EE124C428E7007142E1 /* Shoe.swift in Sources */,
 				DCD7A48C24C69DAF001B49D8 /* CartVC.swift in Sources */,
 				DC1778BC24C624EF00D22239 /* HomeVC.swift in Sources */,
+				DC6A42A824CA76F300267A18 /* ProductsVC.swift in Sources */,
 				DC9C7EE324C42998007142E1 /* Cart.swift in Sources */,
+				DC6A429C24C75D5600267A18 /* CartTableViewCell.swift in Sources */,
 				DC9C7ECA24C3F4BD007142E1 /* AppDelegate.swift in Sources */,
 				DC1778BA24C5E48600D22239 /* NewestArrivalsCell.swift in Sources */,
 				DC1778C424C6916800D22239 /* DetailedVC.swift in Sources */,
 				DC9C7ECC24C3F4BD007142E1 /* SceneDelegate.swift in Sources */,
 				DC9C7EE824C548D3007142E1 /* Category.swift in Sources */,
+				DC6A42A624CA710300267A18 /* ProductCollectionViewCell.swift in Sources */,
 				DC1778C024C646CE00D22239 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

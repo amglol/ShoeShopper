@@ -24,7 +24,7 @@ class DetailsButton: UIButton {
         layer.borderWidth = 1
         layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5)
         backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.4031464041)
-        layer.cornerRadius = 5.0
+        layer.cornerRadius = 10.0
     }
 
 }

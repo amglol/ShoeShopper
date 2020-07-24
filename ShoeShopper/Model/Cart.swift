@@ -8,14 +8,19 @@
 
 import Foundation
 
-struct Cart {
-    var shoe: Shoe?
-    var quantity: Int?
-    var totalPrice: Int?
+struct Cart: Equatable {
     
-    init(shoe: Shoe?, quantity: Int?, totalPrice: Int?) {
+    var shoe: Shoe
+    var quantity: Int
+    var totalPrice: Int
+    
+    init(shoe: Shoe, quantity: Int, totalPrice: Int) {
         self.shoe = shoe
         self.quantity = quantity
         self.totalPrice = totalPrice
+    }
+    
+    static func == (lhs: Cart, rhs: Cart) -> Bool {
+        return lhs.shoe == rhs.shoe
     }
 }

@@ -9,22 +9,33 @@
 import UIKit
 
 class DetailedVC: UIViewController {
+    
+    var shoe: Shoe!
+    var cart: Cart!
+    
+    @IBOutlet weak var brandName: UILabel!
+    @IBOutlet weak var modelName: UILabel!
+    @IBOutlet weak var shoePrice: UILabel!
+    @IBOutlet weak var shoeImage: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let shoe = shoe {
+            brandName.text = shoe.brandName
+            modelName.text = shoe.modelName
+            shoePrice.text = "$\(shoe.price)"
+            shoeImage.image = UIImage(named: shoe.imageName)
+        }
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func addToCartBtnTapped(_ sender: Any) {
+        if let shoe = shoe {
+//            let myCart = Cart(shoe: shoe, quantity: 1, totalPrice: shoe.price)
+//            print(myCart)
+//
+//            let cartArray = [myCart]
+            CartService.cartServiceInstance.addToCart(incomingShoe: shoe)
+        }
     }
-    */
-
 }
