@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Shoe {
+struct Shoe: Equatable {
     private(set) public var imageName: String
     private(set) public var brandName: String
     private(set) public var modelName: String

@@ -27,16 +27,16 @@ class ShoeService {
     
     private let bootShoes = [
         Shoe(imageName: "timsBoots.png", brandName: "Timberland", modelName: "Trailhawk", price: 100),
-        Shoe(imageName: "yellowBoots", brandName: "Saks", modelName: "Vera", price: 175),
-        Shoe(imageName: "waterproofBoots", brandName: "Uggs", modelName: "Classics", price: 140),
+        Shoe(imageName: "yellowBoots.png", brandName: "Saks", modelName: "Vera", price: 175),
+        Shoe(imageName: "waterproofBoots.png", brandName: "Uggs", modelName: "Classics", price: 140),
         Shoe(imageName: "brownBoots.png", brandName: "Aldo", modelName: "Walkmen Elite", price: 105)
     ]
     
     private let casualShoes = [
-        Shoe(imageName: "converseCasuals.png", brandName: "Converse", modelName: "Retro", price: 65),
-        Shoe(imageName: "nikeBrownCasual", brandName: "Nike", modelName: "Hyper Comfort", price: 80),
+        Shoe(imageName: "converseCasual.png", brandName: "Converse", modelName: "Retro", price: 65),
+        Shoe(imageName: "nikeBrownCasual.png", brandName: "Nike", modelName: "Hyper Comfort", price: 80),
         Shoe(imageName: "nikePinkCasual.png", brandName: "Nike", modelName: "AirMaxx", price: 115),
-        Shoe(imageName: "nikeRedCasuals", brandName: "Nike", modelName: "Hightop Classic", price: 150)
+        Shoe(imageName: "nikeRedCasual.png", brandName: "Nike", modelName: "Hightop Classic", price: 150)
     ]
     
     private let runningShoes = [
@@ -74,11 +74,11 @@ class ShoeService {
     //get shoe array for the correct category
     func getShoes(categoryTitle: String) -> [Shoe] {
         switch categoryTitle {
-        case "RUNNING":
+        case "Running":
             return getRunningShoes()
-        case "CASUAL":
+        case "Casual":
             return getCasualShoes()
-        case "BOOTS":
+        case "Boots":
             return getBoots()
         default:
             return getRunningShoes()
