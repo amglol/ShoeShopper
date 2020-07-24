@@ -27,6 +27,7 @@ class CartVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Pare
         updateTotalPriceOfCart()
     }
     
+    //update the total price of the cart
     func updateTotalPriceOfCart() {
         totalPrice = 0
         //loop through the cart array
@@ -60,16 +61,14 @@ class CartVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Pare
         }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected cart item at index: \(indexPath.row)")
-    }
-    
+    //reload table data after quantity has changed
     func requestReloadTableViewData() {
         cartItems = CartService.cartServiceInstance.getCart()
         updateTotalPriceOfCart()
         cartTableView.reloadData()
     }
     
+    //send dat to the purchased VC
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let purchasedVC = segue.destination as? PurchasedVC {
             purchasedVC.price = totalPrice
@@ -77,6 +76,7 @@ class CartVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Pare
     }
 }
 
+//protocol to handle reloaded the table view data in the cart
 protocol ParentTableViewControllerDelegate {
     func requestReloadTableViewData()
 }

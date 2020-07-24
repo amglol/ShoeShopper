@@ -16,7 +16,16 @@ class CartTableViewCell: UITableViewCell {
     @IBOutlet weak var cartShoeName: UILabel!
     @IBOutlet weak var cartShoePrice: UILabel!
     @IBOutlet weak var cartQuantityNum: UILabel!
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        //add padding between table view cells
+        let padding = UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 0)
+        contentView.frame = contentView.frame.inset(by: padding)
+    }
 
+    //update the cart
     func updateView(cart: Cart) {
         cartImageName.image = UIImage(named: cart.shoe.imageName)
         cartShoeName.text = "\(cart.shoe.brandName) \(cart.shoe.modelName)"
@@ -28,12 +37,14 @@ class CartTableViewCell: UITableViewCell {
     }
     
     @IBAction func addQuantityTapped(_ sender: UIButton) {
+        //send the current cart and the ADD action to add to the quantity
         CartService.cartServiceInstance.handleCartItemQuantity(addCart: currentCart, addCartItemAction: 1)
     
         parentTableViewDelegate?.requestReloadTableViewData()
     }
     
     @IBAction func subtractQuantityTapped(_ sender: Any) {
+        //send the current cart and the SUBTRACT action to subtract from the quantity
         CartService.cartServiceInstance.handleCartItemQuantity(addCart: currentCart, addCartItemAction: 0)
         
             parentTableViewDelegate?.requestReloadTableViewData()

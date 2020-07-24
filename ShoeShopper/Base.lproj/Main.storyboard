@@ -37,7 +37,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nikeRedNewest" translatesAutoresizingMaskIntoConstraints="NO" id="Fea-yx-KD3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="381"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="348" height="381"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="348" id="9kL-OG-hb3"/>
                                                         <constraint firstAttribute="height" constant="364" id="eRM-hQ-j4t"/>
@@ -63,7 +63,8 @@
                                                     <rect key="frame" x="316" y="18" width="50" height="39"/>
                                                     <state key="normal" image="heartIcon"/>
                                                     <connections>
-                                                        <action selector="heartAddToCartAction:" destination="jNS-P3-NV3" eventType="touchUpInside" id="Us7-Nj-PYp"/>
+                                                        <action selector="heartBtnSelected:" destination="8Z2-mx-Afh" eventType="touchUpInside" id="IGT-G1-4er"/>
+                                                        <segue destination="7ag-AY-vm6" kind="show" identifier="CartVC" id="e1p-zs-fV0"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -769,8 +770,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ymw-La-eck"/>
-        <segue reference="ADv-Oc-3EL"/>
+        <segue reference="e1p-zs-fV0"/>
+        <segue reference="qcO-M4-M2X"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="adidasBlueRunning" width="204.5" height="136.5"/>

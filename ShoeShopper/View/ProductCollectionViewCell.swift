@@ -14,6 +14,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productModelName: UILabel!
     
+    //update the collection view cells
     func updateView(shoe: Shoe) {
         self.contentView.isUserInteractionEnabled = false
         productImage.image = UIImage(named: shoe.imageName)

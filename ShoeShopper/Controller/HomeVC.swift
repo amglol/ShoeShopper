@@ -39,8 +39,13 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         
     }
     
-    @IBAction func heartAddToCartAction(_ sender: Any) {
+    @IBAction func heartAddToCartAction(_ sender: UIButton) {
         print("HeartBtn in homeVC clicked")
+        
+    }
+    
+    func setupPerformSegueData(shoeData: Shoe) {
+        performSegue(withIdentifier: "detailedShoe", sender: shoeData)
     }
     
     //COLLECTION VIEW DATA
@@ -50,7 +55,7 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let shoe = newArrivalShoes[indexPath.row]
-        performSegue(withIdentifier: "detailedShoe", sender: shoe)
+        setupPerformSegueData(shoeData: shoe)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -91,22 +96,29 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let detailedVC = segue.destination as? DetailedVC {
-            let barBtn = UIBarButtonItem()
-            barBtn.title = ""
-            barBtn.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            navigationItem.backBarButtonItem = barBtn
+            setupBackBarBtn()
+            
+            //pass the shoe data to the detailed VC
             detailedVC.shoe = sender as? Shoe
         }
         
         if let productsVC = segue.destination as? ProductsVC {
-            let barBtn = UIBarButtonItem()
-            barBtn.title = ""
-            barBtn.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            navigationItem.backBarButtonItem = barBtn
+            setupBackBarBtn()
+            
+            //pass the category data to the products VC
             productsVC.category = sender as? Category
         }
     }
     
+    //used as an EXIT (unwind) function
     @IBAction func unwindBackToHomeVC(_ sender: UIStoryboardSegue) {}
+    
+    //setup back bar item
+    func setupBackBarBtn() {
+        let barBtn = UIBarButtonItem()
+        barBtn.title = ""
+        barBtn.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        navigationItem.backBarButtonItem = barBtn
+    }
     
 }

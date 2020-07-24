@@ -22,17 +22,15 @@ class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         // Do any additional setup after loading the view.
         productsCollectionView.delegate = self
         productsCollectionView.dataSource = self
-        
-        print("ProductCollectionView delegate = \(productsCollectionView.delegate)")
-        print("ProductCollectionView data source = \(productsCollectionView.dataSource)")
-        
-        
+
+        //show the shoes from the selected category
         if let incomingCategory = category {
             initializeProducts(category: incomingCategory)
         }
         
     }
     
+    //setup the collection view
     func initializeProducts(category: Category) {
         print("myCategory = \(category)")
         shoes = ShoeService.shoeServiceInstance.getShoes(categoryTitle: category.name)
@@ -58,7 +56,6 @@ class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedShoe = shoes[indexPath.row]
-        print("Selected collectionShoe = \(selectedShoe)")
         performSegue(withIdentifier: "detailedShoe", sender: selectedShoe)
     }
     
@@ -66,8 +63,5 @@ class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         if let detailedVC = segue.destination as? DetailedVC {
             detailedVC.shoe = sender as? Shoe
         }
-    }
-    @IBAction func heartBtnTapped(_ sender: Any) {
-        print("HeartBtn in productsVC clicked")
     }
 }

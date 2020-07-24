@@ -16,16 +16,17 @@ class PurchasedVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("price in cart purchase = \(price)")
 
         //display the total price
         totalPriceLbl.text = "$ \(price)"
     }
     
+    //clears the cart item content after pressing the home btn
     func clearCartContent() {
         CartService.cartServiceInstance.clearCartAfterPurchase()
     }
     
+    //clear cart content
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         clearCartContent()
         

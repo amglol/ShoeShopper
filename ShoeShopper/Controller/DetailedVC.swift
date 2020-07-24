@@ -21,6 +21,7 @@ class DetailedVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //update the view
         if let shoe = shoe {
             brandName.text = shoe.brandName
             modelName.text = shoe.modelName
@@ -31,10 +32,7 @@ class DetailedVC: UIViewController {
 
     @IBAction func addToCartBtnTapped(_ sender: Any) {
         if let shoe = shoe {
-//            let myCart = Cart(shoe: shoe, quantity: 1, totalPrice: shoe.price)
-//            print(myCart)
-//
-//            let cartArray = [myCart]
+            //add the item to cart
             CartService.cartServiceInstance.addToCart(incomingShoe: shoe)
         }
     }
